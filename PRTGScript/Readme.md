@@ -6,11 +6,7 @@ pan-os-python:https://github.com/PaloAltoNetworks/pan-os-python
 In order to use it, some preparation is needed:
 1. PRTG Python using its own runing time, here is a way to install new module for it
 KB:https://kb.paessler.com/en/topic/84447-add-python-modules
-Download https://bootstrap.pypa.io/get-pip.py into PRTGs python directory
-cd C:\Program Files (x86)\PRTG Network Monitor\python\
-python.exe get-pip.py
-cd Scripts
-pip install google-api-python-client
+for this script, we need two modules, paloalto python sdk and lxml.
 
 especially, if you are using a enterprise MA-account, if you install the new module with your account, the new module will be added to the windows roaming folder, which cannot be recognized by PRTG. you need a local account directly on PRTG server to install the new module
 
