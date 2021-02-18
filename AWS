@@ -1,0 +1,14 @@
+Difference between interface endpoint and Gateway endpoint
+AWS doc: https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html
+
+firstly for Gateway endpoint, only S3 and DynamoDB supported.
+
+Interface endpoint
+Have to be set up inside a subnet
+
+
+
+Gateway Endpoint
+when you select Gateway endpoint, a group of routing will be added to you VPC routing table with endpoint ID as name
+A rule with destination pl-xxx(com.amazonaws.eu-central-1.s3) and a target with this endpoints' ID (e.g. vpce-12345678) will be added to the route tables you select below.
+Since these S3 routes are more specific then the default routes, the current connections with pub internet will be routed. AWS also gives a warning regarding this during creation
